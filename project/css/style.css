@@ -107,6 +107,7 @@ h6 {
   font-style: normal;
 }
 
+#header #header_cont #header_arrow_cont img:hover,
 #header #header_cont #navbar #nav_list li:hover,
 #header #header_cont #navbar #nav_logo:hover {
   cursor: pointer;
@@ -135,6 +136,7 @@ body::-webkit-scrollbar-thumb {
 
 .total_cont {
   width: 1170px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -149,8 +151,9 @@ body::-webkit-scrollbar-thumb {
 #header #header_cont {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100%;
 }
 
 #header #header_cont #navbar {
@@ -172,6 +175,7 @@ body::-webkit-scrollbar-thumb {
   width: 22.2222222222%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #header #header_cont #navbar #nav_list li {
@@ -218,6 +222,20 @@ body::-webkit-scrollbar-thumb {
   margin: 30px auto 0;
 }
 
+#header #header_cont #header_arrow_cont {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header #header_cont #header_arrow_cont img {
+  transition: transform 0.6s cubic-bezier(0.28, -0.38, 0.87, 1.31);
+}
+
 @media screen and (max-width: 1170px) {
   .total_cont {
     width: 992px;
@@ -225,6 +243,10 @@ body::-webkit-scrollbar-thumb {
 
   #header #header_cont #navbar #nav_list {
     width: 26.2096774194%;
+  }
+
+  #header #header_cont #title_cont p {
+    width: 70%;
   }
 }
 
@@ -236,15 +258,41 @@ body::-webkit-scrollbar-thumb {
   #header #header_cont #navbar #nav_list {
     width: 33.8541666667%;
   }
+
+  #header #header_cont #title_cont h1 {
+    font-size: 3.5rem;
+  }
+
+  #header #header_cont #title_cont p {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 30px auto 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .total_cont {
     width: 576px;
+    padding: 0 20px;
   }
 
   #header #header_cont #navbar #nav_list {
     width: 45.1388888889%;
+  }
+
+  #header #header_cont #title_cont h1 {
+    font-size: 2.5rem;
+  }
+
+  #header #header_cont #title_cont p {
+    font-size: 1rem;
+    width: 90%;
+    margin: 30px auto 0;
+    opacity: 80%;
+  }
+
+  #header #header_cont #header_arrow_cont img {
+    width: 25px;
   }
 }
 
@@ -254,7 +302,25 @@ body::-webkit-scrollbar-thumb {
     padding: 0 20px;
   }
 
+  #header #header_cont #navbar #nav_logo {
+    width: 90%;
+  }
+
   #header #header_cont #navbar #nav_list {
     width: 60%;
+  }
+
+  #header #header_cont #title_cont h1 {
+    font-size: 2rem;
+  }
+
+  #header #header_cont #title_cont p {
+    font-size: 0.8rem;
+    width: 90%;
+    line-height: 18px;
+  }
+
+  #header #header_cont #header_arrow_cont img {
+    width: 20px;
   }
 }
