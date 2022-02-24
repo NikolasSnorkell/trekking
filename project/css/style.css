@@ -107,6 +107,8 @@ h6 {
   font-style: normal;
 }
 
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_size_cont:hover,
+#content #products_cont #products .products_category .products .products_cards .card:hover,
 #content #products_cont #products .products_category .products .products_amount .cards_control .cards_arrows img,
 #content #content_cont #products_types_cont #products_types #types_checks label:hover,
 #header #header_cont #header_arrow_cont img:hover,
@@ -115,6 +117,11 @@ h6 {
   cursor: pointer;
 }
 
+#content #products_cont #products .products_category .products .products_cards .card .card_bottom,
+#content #products_cont #products .products_category .products .products_cards .card .card_mid,
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont,
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_size_cont,
+#content #products_cont #products .products_category .products .products_cards .card,
 #content #products_cont #products .products_category .category,
 #content #content_cont #products_types_cont #products_types #types_checks {
   display: flex;
@@ -397,10 +404,87 @@ body::-webkit-scrollbar-thumb {
   transform: scale(1.1);
 }
 
+#content #products_cont #products .products_category .products .products_cards {
+  display: flex;
+  justify-content: space-between;
+}
+
 #content #products_cont #products .products_category .products .products_cards .card {
   width: 300px;
   height: 380px;
   background: #f5f6f7;
+  padding: 20px 15px;
+  align-items: unset;
+  flex-direction: column;
+  transition: background 0.4s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card:hover {
+  transform: scale(1.01);
+  background: #e7e9ec;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_size_cont {
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_size_cont p {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont {
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont .colors {
+  display: block;
+  border-radius: 50%;
+  background: пкун;
+  width: 20px;
+  height: 20px;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont .colors:nth-child(1) {
+  background: #165eb9;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont .colors:nth-child(2) {
+  background: #ffe637;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont .colors:nth-child(3) {
+  background: #535253;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_mid {
+  height: 100%;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_bottom {
+  justify-content: space-between;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_bottom p {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_bottom p.card_products_name {
+  color: #aa9b77;
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_bottom p.card_products_price {
+  color: #333333;
 }
 
 @media screen and (max-width: 1170px) {
@@ -520,5 +604,9 @@ body::-webkit-scrollbar-thumb {
 
   #content #content_cont #products_types_cont #products_types #all_products_btn_cont a {
     padding: 15px 20px;
+  }
+
+  #content #products_cont #products .products_category .category .category_line {
+    width: 70%;
   }
 }
