@@ -203,3 +203,65 @@ function sizeBtn(elem){
     $(elem).children(".card_sizes_block").slideToggle(200);
 }
 
+
+
+
+
+let men_cards = $(".products_cards_men").children(".card");
+let women_cards = $(".products_cards_women").children(".card");
+let children_cards = $(".products_cards_children").children(".card");
+
+let cards_all = $(".card");
+
+for(let i=0;i<men_cards.length;i++){
+
+   $( men_cards[i]).click(function(){
+        cardClicked(this,"men");    
+    })
+}
+for(let i=0;i<women_cards.length;i++){
+
+    $( women_cards[i]).click(function(){
+         cardClicked(this,"women");    
+     })
+ }
+ for(let i=0;i<children_cards.length;i++){
+
+    $( children_cards[i]).click(function(){
+         cardClicked(this,"children");    
+     })
+ }
+
+
+function cardClicked(elem, key){
+   
+if(key=="men"){
+    $(men_cards).css({
+        border:"5px solid transparent",
+    })
+}
+if(key=="women"){
+    $(women_cards).css({
+        border:"5px solid transparent",
+    })
+}
+if(key=="children"){
+    $(children_cards).css({
+        border:"5px solid transparent",
+    })
+}
+  
+$(elem).css({
+    border:"5px solid #aa9b77",
+})
+}
+
+
+$(".colors").click(function(){
+    colorsClick(this);
+})
+
+function colorsClick(elem){
+    $(elem).siblings(".colors").css("border","2px solid transparent");
+    $(elem).css("border","2px solid #aa9b77");
+}

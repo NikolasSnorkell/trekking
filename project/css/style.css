@@ -424,9 +424,11 @@ body::-webkit-scrollbar-thumb {
   background: #f5f6f7;
   padding: 20px 15px;
   margin: 0 20px;
+  border: 5px solid transparent;
+  border-radius: 4px;
   align-items: unset;
   flex-direction: column;
-  transition: background 0.4s ease-in-out, transform 0.5s ease-in-out;
+  transition: background 0.4s ease-in-out, transform 0.5s ease-in-out, border 0.5s cubic-bezier(0.55, -0.96, 0.41, 1.98);
 }
 
 #content #products_cont #products .products_category .products .products_cards .card:hover {
@@ -450,12 +452,13 @@ body::-webkit-scrollbar-thumb {
   left: 20px;
   width: 50px;
   padding: 5px 0;
-  background: white;
+  background: #aa9b77;
   border: 1px solid #333333;
   border-radius: 5px;
 }
 
 #content #products_cont #products .products_category .products .products_cards .card .card_top .card_size_cont .card_sizes_block span {
+  color: #fff;
   display: block;
   width: 70%;
   font-size: 1.1rem;
@@ -467,7 +470,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #content #products_cont #products .products_category .products .products_cards .card .card_top .card_size_cont .card_sizes_block span:hover {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #fff;
 }
 
 #content #products_cont #products .products_category .products .products_cards .card .card_top .card_size_cont p {
@@ -487,6 +490,12 @@ body::-webkit-scrollbar-thumb {
   background: пкун;
   width: 20px;
   height: 20px;
+  border: 1px solid transparent;
+  transition: border 0.3s cubic-bezier(0.28, -0.38, 0.87, 1.31);
+}
+
+#content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont .colors:hover {
+  border: 2px solid #aa9b77;
 }
 
 #content #products_cont #products .products_category .products .products_cards .card .card_top .card_colors_cont .colors:nth-child(1) {
